@@ -17,3 +17,5 @@ Gemfile.lock
 .yardoc
 _yardoc
 doc/
+
+notes.db
