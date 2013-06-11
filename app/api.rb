@@ -13,7 +13,8 @@ class API < Grape::API
   end
 
   post "posts" do
-    post = Post.new title: params[:title], body: params[:body]
+    post = Post.new usr: params[:usr], device: params[:device], content: params[:content], app: params[:app] , ip: params[:ip]  
+
     if post.save
       { postId: post.id }
     else
@@ -21,19 +22,21 @@ class API < Grape::API
     end
   end
 
-  put "posts/:id" do
-    post = Post.find(params[:id])
-    post.title = params[:title]
-    post.body = params[:body]
-    if post.save
-      { postId: post.id }
-    else
-      error!({ errors: post.errors.messages }, 403)
-    end
-  end
+  # put "posts/:id" do
+  #   post = Post.find(params[:id])
 
-  delete "posts/:id" do
-    Post.find(params[:id]).destroy
-  end
+  #   post.usr = params[:usr]
+  #   post.content = params[:content]
+
+  #   if post.save
+  #     { postId: post.id }
+  #   else
+  #     error!({ errors: post.errors.messages }, 403)
+  #   end
+  # end
+
+  # delete "posts/:id" do
+  #   Post.find(params[:id]).destroy
+  # end
 
 end
