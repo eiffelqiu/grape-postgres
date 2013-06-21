@@ -1,16 +1,17 @@
 GEM
   remote: http://ruby.taobao.org/
   remote: http://rubygems.org/
+  remote: http://gems.github.com/
   specs:
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    addressable (2.3.4)
-    backports (3.3.1)
+    addressable (2.2.8)
+    backports (3.3.2)
     bcrypt-ruby (3.0.1)
-    builder (3.2.2)
+    builder (3.2.0)
     daemons (1.1.9)
-    data_objects (0.10.13)
+    data_objects (0.10.8)
       addressable (~> 2.1)
     datamapper (1.2.0)
       dm-aggregates (~> 1.2.0)
@@ -27,8 +28,8 @@ GEM
       dm-core (~> 1.2.0)
     dm-constraints (1.2.0)
       dm-core (~> 1.2.0)
-    dm-core (1.2.1)
-      addressable (~> 2.3)
+    dm-core (1.2.0)
+      addressable (~> 2.2.6)
     dm-do-adapter (1.2.0)
       data_objects (~> 0.10.6)
       dm-core (~> 1.2.0)
@@ -60,13 +61,13 @@ GEM
       uuidtools (~> 2.1)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    do_postgres (0.10.13)
-      data_objects (= 0.10.13)
-    do_sqlite3 (0.10.13)
-      data_objects (= 0.10.13)
+    do_postgres (0.10.8)
+      data_objects (= 0.10.8)
+    do_sqlite3 (0.10.8)
+      data_objects (= 0.10.8)
     eventmachine (1.0.3)
     fastercsv (1.5.5)
-    grape (0.4.1)
+    grape (0.5.0)
       activesupport
       builder
       hashie (>= 1.2.0)
@@ -80,7 +81,7 @@ GEM
     i18n (0.6.1)
     json (1.8.0)
     json_pure (1.8.0)
-    multi_json (1.7.6)
+    multi_json (1.7.7)
     multi_xml (0.5.4)
     rack (1.5.2)
     rack-accept (0.4.5)
@@ -101,7 +102,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  datamapper
+  datamapper (>= 1.2.0)
   dm-postgres-adapter
   dm-sqlite-adapter
   grape
