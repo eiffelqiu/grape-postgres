@@ -11,7 +11,7 @@ require 'api'
 
 class Web < Sinatra::Base
   get '/' do
-    "ok1"
+    "ok"
   end
 end
 
