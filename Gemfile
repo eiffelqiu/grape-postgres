@@ -13,10 +13,16 @@ gem 'sinatra'
 #gem 'sqlite3'
 
 group :production do 
+	gem 'pg'
 	gem 'jdbc-postgres'
 end
 
 group :development, :test do 
-
 	gem 'jdbc-sqlite3'
+end
+
+group :deploy do
+	gem "net-ssh", :require => "net/ssh" 
+	gem "net-scp", :require => "net/scp" 
+	gem "warbler", "1.3.8"
 end
