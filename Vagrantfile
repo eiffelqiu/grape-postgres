@@ -109,12 +109,14 @@ Vagrant.configure("2") do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
-#config.vm.forward_port 80, 8080
+config.vm.network :forwarded_port, guest: 80, host: 8080
+config.vm.network :forwarded_port, guest: 8080, host: 8888
 config.vm.provision :puppet do |puppet| 
   puppet.manifests_path = "puppet/manifests" 
   puppet.module_path = "puppet/modules"
   puppet.manifest_file = "site.pp"
 end  
+config.vm.box = "warbler" 
 end
 
 
