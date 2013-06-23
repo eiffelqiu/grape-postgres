@@ -1,3 +1,4 @@
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -108,4 +109,13 @@ Vagrant.configure("2") do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+#config.vm.forward_port 80, 8080
+config.vm.provision :puppet do |puppet| 
+  puppet.manifests_path = "puppet/manifests" 
+  puppet.module_path = "puppet/modules"
+  puppet.manifest_file = "site.pp"
+end  
 end
+
+
+
