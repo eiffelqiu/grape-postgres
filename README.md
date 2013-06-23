@@ -7,4 +7,4 @@ grape-datamapper-postgres
 	
 2: Client api 
 
-	$ curl -X POST -d 'usr=qiuhaifeng&content=leavemessage&device=32431242143211234&app=liuyaozhuanggua&ip=123.33.44.55' http://www.likenote.com:54166/posts   
+	$ curl -X POST -d 'usr=qiuhaifeng&content=leavemessage&device=32431242143211234&app=liuyaozhuanggua&ip=123.33.44.55' http://localhost:4567/posts   
