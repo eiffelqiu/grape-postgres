@@ -10,3 +10,13 @@ gem 'thin'
 gem 'sinatra'
 gem 'puma'
 gem 'rainbows'
+gem 'sqlite3'
+
+group :production do 
+	gem 'jdbc-postgres'
+end
+
+group :development, :test do 
+
+	gem 'jdbc-sqlite3'
+end
