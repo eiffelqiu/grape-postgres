@@ -1,3 +1,6 @@
+#\ -s trinidad
+# rack.version: ~>1.5.2
+
 $:.unshift "./app"
 require 'rubygems'
 require 'data_mapper' 

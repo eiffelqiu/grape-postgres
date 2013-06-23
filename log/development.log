@@ -1,0 +1,3054 @@
+2013-06-23 17:13:45 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 17:13:45 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 17:13:49 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 17:13:49 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@28c3d5b4
+equals = <error: >
+err = java.io.PrintStream@1d39bf09
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@511be529
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@5aab4a39
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@d0a0086
+throw_init_exception = true
+2013-06-23 17:13:49 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:13:49 +0800 INFO: added application to pool, size now = 1
+2013-06-23 17:13:49 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:14:51 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 17:14:51 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 17:14:54 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 17:14:54 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@5ca92583
+equals = <error: >
+err = java.io.PrintStream@231232bb
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@7fa1007a
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@69cfbe29
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@2a728ed1
+throw_init_exception = true
+2013-06-23 17:14:54 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:14:54 +0800 INFO: added application to pool, size now = 1
+2013-06-23 17:14:54 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:20:08 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 17:20:08 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 17:20:11 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 17:20:11 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@469681e0
+equals = <error: >
+err = java.io.PrintStream@5738e61c
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@5687d922
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@5b912745
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@52cf58ad
+throw_init_exception = true
+2013-06-23 17:20:11 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:20:11 +0800 INFO: added application to pool, size now = 1
+2013-06-23 17:20:11 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:25:18 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 17:25:18 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 17:25:21 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 17:25:21 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@733489cb
+equals = <error: >
+err = java.io.PrintStream@2c72bd07
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@7c71e0fb
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@44ff87c7
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@17ff81fd
+throw_init_exception = true
+2013-06-23 17:25:21 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 17:25:21 +0800 INFO: added application to pool, size now = 1
+2013-06-23 17:25:21 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:21:56 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:21:56 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:21:59 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:21:59 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@124f8942
+equals = <error: >
+err = java.io.PrintStream@2e5015be
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@7ee53f21
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@3951b84e
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@6d76b8fa
+throw_init_exception = true
+2013-06-23 18:21:59 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:21:59 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:21:59 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:30:31 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:30:31 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:30:34 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:30:34 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@2f225aee
+equals = <error: >
+err = java.io.PrintStream@1de6678d
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@23ca4f4f
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@7dc7d255
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@89e2002
+throw_init_exception = true
+2013-06-23 18:30:34 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:30:34 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:30:34 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:33:52 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:33:52 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:33:55 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:33:55 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rake-10.1.0
+  activerecord-jdbc-adapter-1.2.9
+  i18n-0.6.1
+  multi_json-1.7.7
+  activesupport-3.2.13
+  addressable-2.2.8
+  backports-3.3.2
+  bcrypt-ruby-3.0.1-java
+  builder-3.2.0
+  bundler-1.3.5
+  data_objects-0.10.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  fastercsv-1.5.5
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-transactions-1.2.0
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  dm-validations-1.2.0
+  datamapper-1.2.0
+  descendants_tracker-0.0.1
+  dm-do-adapter-1.2.0
+  do_jdbc-0.10.8-java
+  jdbc-sqlite3-3.7.2.1
+  do_sqlite3-0.10.8-java
+  dm-sqlite-adapter-1.2.0
+  hashie-2.0.5
+  multi_xml-0.5.4
+  rack-1.5.2
+  rack-accept-0.4.5
+  rack-mount-0.8.3
+  virtus-0.5.5
+  grape-0.5.0
+  jruby-jars-1.7.4
+  jruby-rack-1.1.13.2
+  net-ssh-2.6.7
+  net-scp-1.1.1
+  rack-protection-1.5.0
+  rubyzip-0.9.9
+  tilt-1.4.1
+  sinatra-1.4.3
+  sqlite3-1.3.7
+  trinidad_jars-1.2.4
+  trinidad-1.4.5
+  warbler-1.3.8
+
+--- Bundler
+Bundler.bundle_path: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Bundler.root: /Users/eiffel/Desktop/grape-datamapper-postgres
+Gemfile: /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+Settings:
+  without = production
+  bin = bin
+  bin_path = /Users/eiffel/.rvm/gems/jruby-1.7.1@global/gems/bundler-1.3.5/bin/bundle
+  gemfile = /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@1416c1f4
+equals = <error: >
+err = java.io.PrintStream@2e39305b
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@4f8dfc01
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@37c953d7
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@fd203cb
+throw_init_exception = true
+2013-06-23 18:33:55 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:33:55 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:33:55 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:35:13 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:35:13 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:35:16 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:35:16 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rake-10.1.0
+  activerecord-jdbc-adapter-1.2.9
+  i18n-0.6.1
+  multi_json-1.7.7
+  activesupport-3.2.13
+  addressable-2.2.8
+  backports-3.3.2
+  bcrypt-ruby-3.0.1-java
+  builder-3.2.0
+  bundler-1.3.5
+  data_objects-0.10.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  fastercsv-1.5.5
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-transactions-1.2.0
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  dm-validations-1.2.0
+  datamapper-1.2.0
+  descendants_tracker-0.0.1
+  dm-do-adapter-1.2.0
+  do_jdbc-0.10.8-java
+  jdbc-sqlite3-3.7.2.1
+  do_sqlite3-0.10.8-java
+  dm-sqlite-adapter-1.2.0
+  hashie-2.0.5
+  multi_xml-0.5.4
+  rack-1.5.2
+  rack-accept-0.4.5
+  rack-mount-0.8.3
+  virtus-0.5.5
+  grape-0.5.0
+  jruby-jars-1.7.4
+  jruby-rack-1.1.13.2
+  net-ssh-2.6.7
+  net-scp-1.1.1
+  rack-protection-1.5.0
+  rubyzip-0.9.9
+  tilt-1.4.1
+  sinatra-1.4.3
+  sqlite3-1.3.7
+  trinidad_jars-1.2.4
+  trinidad-1.4.5
+  warbler-1.3.8
+
+--- Bundler
+Bundler.bundle_path: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Bundler.root: /Users/eiffel/Desktop/grape-datamapper-postgres
+Gemfile: /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+Settings:
+  without = production
+  bin = bin
+  gemfile = /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+  bin_path = /Users/eiffel/.rvm/gems/jruby-1.7.1@global/gems/bundler-1.3.5/bin/bundle
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@57d85e94
+equals = <error: >
+err = java.io.PrintStream@7ca072dd
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@1cdcbf72
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@6ef15995
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@7126317a
+throw_init_exception = true
+2013-06-23 18:35:16 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:35:16 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:35:16 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:35:31 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:35:31 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:35:34 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:35:34 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@4a0b0b20
+equals = <error: >
+err = java.io.PrintStream@79466cd4
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@76f2790f
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@217bd515
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@22e93648
+throw_init_exception = true
+2013-06-23 18:35:34 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:35:34 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:35:34 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:43:29 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:43:29 +0800 INFO: using 1:5 runtime pool with acquire timeout of 5.0 seconds
+2013-06-23 18:43:32 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:43:32 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 5
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@46fe511c
+equals = <error: >
+err = java.io.PrintStream@5cc380b
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@62e245b6
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 5
+num_initializer_threads = 
+out = java.io.PrintStream@618e490f
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@5b411dd7
+throw_init_exception = true
+2013-06-23 18:43:32 +0800 SEVERE: unable to initialize application
+org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:43:32 +0800 INFO: added application to pool, size now = 1
+2013-06-23 18:43:32 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:44:51 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:44:51 +0800 INFO: using a shared (threadsafe!) runtime
+2013-06-23 18:44:54 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:44:54 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 1
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@17507edd
+equals = <error: >
+err = java.io.PrintStream@4d28d127
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@7a10d90b
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 1
+num_initializer_threads = 
+out = java.io.PrintStream@5f0f176
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@3fd87157
+throw_init_exception = true
+2013-06-23 18:44:54 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:51:44 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:51:44 +0800 INFO: using a shared (threadsafe!) runtime
+2013-06-23 18:51:47 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:51:47 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 1
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@56eccfff
+equals = <error: >
+err = java.io.PrintStream@408f18f5
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@5b72fb19
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 1
+num_initializer_threads = 
+out = java.io.PrintStream@41d85e69
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@663fc37
+throw_init_exception = true
+2013-06-23 18:51:47 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:52:10 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:52:10 +0800 INFO: using a shared (threadsafe!) runtime
+2013-06-23 18:52:13 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:52:13 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 1
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rake-10.1.0
+  activerecord-jdbc-adapter-1.2.9
+  i18n-0.6.1
+  multi_json-1.7.7
+  activesupport-3.2.13
+  addressable-2.2.8
+  backports-3.3.2
+  bcrypt-ruby-3.0.1-java
+  builder-3.2.0
+  bundler-1.3.5
+  data_objects-0.10.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  fastercsv-1.5.5
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-transactions-1.2.0
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  dm-validations-1.2.0
+  datamapper-1.2.0
+  descendants_tracker-0.0.1
+  dm-do-adapter-1.2.0
+  do_jdbc-0.10.8-java
+  jdbc-sqlite3-3.7.2.1
+  do_sqlite3-0.10.8-java
+  dm-sqlite-adapter-1.2.0
+  hashie-2.0.5
+  multi_xml-0.5.4
+  rack-1.5.2
+  rack-accept-0.4.5
+  rack-mount-0.8.3
+  virtus-0.5.5
+  grape-0.5.0
+  jruby-jars-1.7.4
+  jruby-rack-1.1.13.2
+  net-ssh-2.6.7
+  net-scp-1.1.1
+  rack-protection-1.5.0
+  rubyzip-0.9.9
+  tilt-1.4.1
+  sinatra-1.4.3
+  trinidad_jars-1.2.4
+  trinidad-1.4.5
+  warbler-1.3.8
+
+--- Bundler
+Bundler.bundle_path: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Bundler.root: /Users/eiffel/Desktop/grape-datamapper-postgres
+Gemfile: /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+Settings:
+  without = production
+  bin = bin
+  bin_path = /Users/eiffel/.rvm/gems/jruby-1.7.1@global/gems/bundler-1.3.5/bin/bundle
+  gemfile = /Users/eiffel/Desktop/grape-datamapper-postgres/Gemfile
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@1597db22
+equals = <error: >
+err = java.io.PrintStream@362de08a
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@4a92786f
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 1
+num_initializer_threads = 
+out = java.io.PrintStream@5b4aa17
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@43724854
+throw_init_exception = true
+2013-06-23 18:52:13 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 18:53:39 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 18:53:39 +0800 INFO: using a shared (threadsafe!) runtime
+2013-06-23 18:53:42 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 18:53:42 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 1
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@53450cac
+equals = <error: >
+err = java.io.PrintStream@7fbdb173
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@47ea9477
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 1
+num_initializer_threads = 
+out = java.io.PrintStream@22240e82
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@62580334
+throw_init_exception = true
+2013-06-23 18:53:42 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
+2013-06-23 19:59:00 +0800 INFO: jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+2013-06-23 19:59:00 +0800 INFO: using a shared (threadsafe!) runtime
+2013-06-23 19:59:03 +0800 INFO: An exception happened during JRuby-Rack startup
+cannot load Java class org.sqlite.JDBC
+--- System
+jruby 1.7.1 (1.9.3p327) 2012-12-03 30a153b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+Time: 2013-06-23 19:59:03 +0800
+Server: Apache Tomcat/7.0.41
+jruby.home: /Users/eiffel/.rvm/rubies/jruby-1.7.1
+
+--- Context Init Parameters:
+app.root = /Users/eiffel/Desktop/grape-datamapper-postgres
+jruby.compat.version = 1.9.3
+jruby.initial.runtimes = 1
+jruby.max.runtimes = 1
+jruby.min.runtimes = 1
+jruby.rack.error = false
+jruby.rack.layout_class = JRuby::Rack::FileSystemLayout
+jruby.rack.logging = JUL
+jruby.rack.logging.name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+jruby.runtime.acquire.timeout = 5.0
+public.root = public
+rack.env = development
+rackup.path = config.ru
+
+--- Backtrace
+NameError: cannot load Java class org.sqlite.JDBC
+         for_name at org/jruby/javasupport/JavaClass.java:1225
+  get_proxy_class at org/jruby/javasupport/JavaUtilities.java:34
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26
+              map at org/jruby/RubyArray.java:2360
+      java_import at file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1
+          require at org/jruby/RubyKernel.java:1027
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60
+          require at /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1
+           (root) at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1
+     load_adapter at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163
+    adapter_class at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133
+    instance_eval at org/jruby/RubyBasicObject.java:1691
+              new at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13
+            setup at /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230
+
+--- RubyGems
+Gem.dir: /Users/eiffel/.rvm/gems/jruby-1.7.1
+Gem.path:
+/Users/eiffel/.rvm/gems/jruby-1.7.1
+/Users/eiffel/.rvm/gems/jruby-1.7.1@global
+Activated gems:
+  rack-1.5.2
+  addressable-2.2.8
+  dm-core-1.2.0
+  dm-aggregates-1.2.0
+  dm-constraints-1.2.0
+  dm-migrations-1.2.0
+  dm-transactions-1.2.0
+  fastercsv-1.5.5
+  multi_json-1.7.7
+  json-1.8.0-java
+  json_pure-1.8.0
+  dm-serializer-1.2.2
+  dm-timestamps-1.2.0
+  dm-validations-1.2.0
+  bcrypt-ruby-3.0.1-java
+  stringex-1.5.1
+  uuidtools-2.1.4
+  dm-types-1.2.2
+  datamapper-1.2.0
+  mini_portile-0.5.0
+  nokogiri-1.6.0-java
+  tilt-1.4.1
+  rack-protection-1.5.0
+  sinatra-1.4.3
+  data_objects-0.10.8
+  jdbc-sqlite3-3.7.2.1
+  do_jdbc-0.10.8-java
+  do_sqlite3-0.10.8-java
+  dm-do-adapter-1.2.0
+  dm-sqlite-adapter-1.2.0
+
+--- Bundler
+undefined method `bundle_path' for Bundler:Module
+
+--- JRuby-Rack Config
+compat_version = RUBY1_9
+default_logger = org.jruby.rack.logging.StandardOutLogger@427301fe
+equals = <error: >
+err = java.io.PrintStream@40f551b0
+filter_adds_html = true
+filter_verifies_resource = false
+ignore_environment = false
+initial_memory_buffer_size = 
+initial_runtimes = 1
+jms_connection_factory = 
+jms_jndi_properties = 
+logger = org.jruby.rack.logging.JulLogger@779af3f4
+logger_class_name = JUL
+logger_name = org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[default]
+maximum_memory_buffer_size = 
+maximum_runtimes = 1
+num_initializer_threads = 
+out = java.io.PrintStream@5b3e4cbf
+rackup = 
+rackup_path = config.ru
+rewindable = true
+runtime_arguments = 
+runtime_environment = 
+runtime_timeout_seconds = 
+serial_initialization = false
+servlet_context = org.apache.catalina.core.ApplicationContextFacade@4280144c
+throw_init_exception = true
+2013-06-23 19:59:03 +0800 SEVERE: Exception sending context initialized event to listener instance of class org.jruby.rack.RackServletContextListener
+org.jruby.rack.RackInitializationException: cannot load Java class org.sqlite.JDBC
+	from org/jruby/javasupport/JavaClass.java:1225:in `for_name'
+	from org/jruby/javasupport/JavaUtilities.java:34:in `get_proxy_class'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26:in `java_import'
+	from org/jruby/RubyArray.java:2360:in `map'
+	from file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22:in `java_import'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1:in `(root)'
+	from org/jruby/RubyKernel.java:1027:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60:in `require'
+	from /Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55:in `require'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1:in `(root)'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163:in `load_adapter'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133:in `adapter_class'
+	from org/jruby/RubyBasicObject.java:1691:in `instance_eval'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13:in `new'
+	from /Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230:in `setup'
+
+	at org.jruby.rack.RackInitializationException.wrap(RackInitializationException.java:29)
+	at org.jruby.rack.RackApplicationFactoryDecorator.init(RackApplicationFactoryDecorator.java:98)
+	at org.jruby.rack.RackServletContextListener.contextInitialized(RackServletContextListener.java:50)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4887)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5381)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:334)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:166)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:722)
+Caused by: org.jruby.exceptions.RaiseException: (NameError) cannot load Java class org.sqlite.JDBC
+	at org.jruby.javasupport.JavaClass.for_name(org/jruby/javasupport/JavaClass.java:1225)
+	at org.jruby.javasupport.JavaUtilities.get_proxy_class(org/jruby/javasupport/JavaUtilities.java:34)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:26)
+	at org.jruby.RubyArray.map(org/jruby/RubyArray.java:2360)
+	at RUBY.java_import(file:/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/jruby.jar!/jruby/java/core_ext/object.rb:22)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/do_sqlite3-0.10.8-java/lib/do_sqlite3.rb:23)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:36)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter/adapter.rb:1)
+	at org.jruby.RubyKernel.require(org/jruby/RubyKernel.java:1027)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:60)
+	at Kernel.require(/Users/eiffel/.rvm/rubies/jruby-1.7.1/lib/ruby/shared/rubygems/custom_require.rb:55)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-sqlite-adapter-1.2.0/lib/dm-sqlite-adapter.rb:1)
+	at RUBY.(root)(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:1)
+	at RUBY.load_adapter(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:163)
+	at RUBY.adapter_class(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:133)
+	at org.jruby.RubyBasicObject.instance_eval(org/jruby/RubyBasicObject.java:1691)
+	at RUBY.new(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core/adapters.rb:13)
+	at RUBY.setup(/Users/eiffel/.rvm/gems/jruby-1.7.1/gems/dm-core-1.2.0/lib/dm-core.rb:230)
+
