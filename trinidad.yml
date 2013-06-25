@@ -5,7 +5,3 @@ environment: development
 jruby_min_runtimes: 1
 jruby_max_runtimes: 4 
 log: INFO
-web_apps:
-  simple:
-    web_app_dir: /Users/swh/tmp/simple
-    context: /
