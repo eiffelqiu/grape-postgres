@@ -24,4 +24,5 @@ Gemfile.lock
 log/*
 *.war
 bin
-.vagrant
+.vagrant/*
+bin/*
