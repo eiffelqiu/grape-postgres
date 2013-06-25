@@ -13,14 +13,14 @@ gem 'sinatra'
 gem 'trinidad', '1.4.5'
 gem 'activerecord-jdbc-adapter'
 # SQLite JDBC adapter
-group :production do 
-	gem 'pg'
-	gem 'jdbc-postgres'
-	gem 'dm-postgres-adapter'
-end
+# group :production do 
+# 	gem 'pg'
+# 	gem 'jdbc-postgres'
+# 	gem 'dm-postgres-adapter'
+# end
 
 #gem 'sqlite3'
-gem 'jdbc-sqlite3'
+gem 'jdbc-sqlite3', :require => false
 gem 'dm-sqlite-adapter'	
 
 group :deploy do

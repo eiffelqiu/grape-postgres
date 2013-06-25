@@ -1,12 +1,9 @@
-#\ -s trinidad
-# rack.version: ~>1.5.2
-
+require 'java'
+$: << 'lib/java/sqlite-jdbc-3.7.2.jar'
 $:.unshift "./app"
 require 'rubygems'
 require 'data_mapper' 
 require 'sinatra'
-
-#DataMapper.setup(:default, 'postgres://eiffel:eiffel@127.0.0.1/notes')
 DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/notes.db")
 
 require 'models'
