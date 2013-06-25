@@ -22,3 +22,6 @@ doc/
 notes.db
 Gemfile.lock
 log/*
+*.war
+bin
+.vagrant
