@@ -13,12 +13,12 @@ class API < Grape::API
   end
 
   post "posts" do
-    post = Post.new usr: params[:usr], device: params[:device], content: params[:content], app: params[:app] , ip: params[:ip]  
+    post = Post.new(:usr => params[:usr], :device => params[:device], :content => params[:content] , :app =>params[:app], :ip => params[:ip])  
 
     if post.save
-      { postId: post.id }
+      { :postId => post.id }
     else
-      error!({ errors: post.errors.messages }, 403)
+      error!({ :errors => post.errors.messages }, 403)
     end
   end
 
