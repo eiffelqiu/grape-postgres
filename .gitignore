@@ -26,3 +26,4 @@ log/*
 bin
 .vagrant/*
 bin/*
+torquebox-lite/*

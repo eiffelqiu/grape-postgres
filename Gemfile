@@ -1,6 +1,9 @@
 source 'http://ruby.taobao.org'
 source 'http://rubygems.org'
-source 'http://gems.github.com'
+# source 'http://gems.github.com'
+source 'http://torquebox.org/rubygems'
+
+gem 'torquebox-server', '2.3.2'
 
 gem 'grape'
 gem 'datamapper', '>= 1.2.0'
