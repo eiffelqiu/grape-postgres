@@ -1,0 +1,8 @@
+2013-06-25 06:17:01 INFO: No global web.xml found
+2013-06-25 06:17:02 INFO: INFO: jruby 1.6.8 (ruby-1.8.7-p357) (2012-09-18 1772b40) (Java HotSpot(TM) 64-Bit Server VM 1.7.0_21) [darwin-x86_64-java]
+2013-06-25 06:17:02 INFO: INFO: using a shared (threadsafe!) runtime
+2013-06-25 06:17:08 INFO: Starting ProtocolHandler ["http-bio-3000"]
+2013-06-25 06:17:34 INFO: Pausing ProtocolHandler ["http-bio-3000"]
+2013-06-25 06:17:35 INFO: Stopping service Tomcat
+2013-06-25 06:17:35 INFO: Stopping ProtocolHandler ["http-bio-3000"]
+2013-06-25 06:17:35 INFO: Destroying ProtocolHandler ["http-bio-3000"]

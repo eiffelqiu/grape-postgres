@@ -1,5 +1,3 @@
-require 'java'
-$: << 'lib/java/sqlite-jdbc-3.7.2.jar'
 $:.unshift "./app"
 require 'rubygems'
 require 'data_mapper' 
