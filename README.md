@@ -1,8 +1,12 @@
-grape-postgres
+grape-postgres(Jruby)
 =========================
 
+1: Jruby
 
-1: Prepare for postgresql database
+	$ rvm install jruby
+	$ rvm use jruby --default
+
+2: Postgresql
 
 	$ createdb notes
 	$ psql notes
@@ -13,15 +17,15 @@ grape-postgres
 	$ notes=# grant all privileges on database notes to notes;
 	$ notes=# \q
 
-2: Prepare rubygems
+3: Rubygems
 
 	$ bundle install
 
-3: Start server
+4: Start server
 
 	$ torquebox-lite
 	
-4: Client api 
+5: API
 
 	$ curl -X POST -d 'usr=qiuhaifeng&content=leavemessage&device=32431242143211234&app=liuyaozhuanggua&ip=123.33.44.55' http://localhost:8080/posts   
 
