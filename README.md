@@ -13,11 +13,15 @@ grape-postgres
 	$ notes=# grant all privileges on database notes to notes;
 	$ notes=# \q
 
-1: Start server
+2: Prepare rubygems
+
+	$ bundle install
+
+3: Start server
 
 	$ torquebox-lite
 	
-2: Client api 
+4: Client api 
 
 	$ curl -X POST -d 'usr=qiuhaifeng&content=leavemessage&device=32431242143211234&app=liuyaozhuanggua&ip=123.33.44.55' http://localhost:8080/posts   
 
