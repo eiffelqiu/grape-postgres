@@ -17,3 +17,9 @@ class API < Grape::API
   end
 
 end
+
+class Web < Sinatra::Base
+  get '/' do
+    "ok"
+  end
+end
