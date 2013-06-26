@@ -1,6 +1,18 @@
 grape-postgres
 =========================
 
+
+1: Prepare for postgresql database
+
+	$ createdb notes
+	$ psql notes
+
+	## in psql console
+
+	$ notes=# create user notes;
+	$ notes=# grant all privileges on database notes to notes;
+	$ notes=# \q
+
 1: Start server
 
 	$ torquebox-lite
