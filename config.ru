@@ -1,8 +1,8 @@
 $:.unshift "./app"
 require 'rubygems'
-require 'data_mapper' 
+#require 'data_mapper' 
 require 'sinatra'
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/notes.db")
+#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/notes.db")
 
 require 'models'
 require 'api'

@@ -10,11 +10,12 @@ gem 'datamapper', '>= 1.2.0'
 gem 'bundler'
 #gem 'thin'
 gem 'sinatra'
+gem 'sequel'
 #gem 'puma'
 #gem 'rainbows'
 #gem 'sqlite3'
 gem 'trinidad', '1.4.5'
-gem 'activerecord-jdbc-adapter'
+#gem 'activerecord-jdbc-adapter'
 # SQLite JDBC adapter
 # group :production do 
 # 	gem 'pg'
@@ -24,7 +25,7 @@ gem 'activerecord-jdbc-adapter'
 
 #gem 'sqlite3'
 gem 'jdbc-sqlite3', :require => false
-gem 'dm-sqlite-adapter'	
+#gem 'dm-sqlite-adapter'	
 
 group :deploy do
 	gem "net-ssh", :require => "net/ssh" 

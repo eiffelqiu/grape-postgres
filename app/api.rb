@@ -5,21 +5,21 @@ class API < Grape::API
   format :json
 
   get "posts" do
-    Post.all
+    Post.all.map { |e| e.usr }
   end
 
   get 'posts/:id' do
-    Post.find(params[:id])
+    Post.where(:id => params[:id])
   end
 
   post "posts" do
-    post = Post.new(:usr => params[:usr], :device => params[:device], :content => params[:content] , :app =>params[:app], :ip => params[:ip])  
+    post = Post.insert(:usr => params[:usr], :device => params[:device], :content => params[:content] , :app =>params[:app], :ip => params[:ip])  
 
-    if post.save
-      { :postId => post.id }
-    else
-      error!({ :errors => post.errors.messages }, 403)
-    end
+    # if post.save
+    #   { :postId => post.id }
+    # else
+    #   error!({ :errors => post.errors.messages }, 403)
+    # end
   end
 
   # put "posts/:id" do
