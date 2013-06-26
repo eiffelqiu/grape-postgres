@@ -18,5 +18,12 @@ Gemfile.lock
 _yardoc
 doc/
 
+*.war
 notes.db
 Gemfile.lock
+log/*
+*.war
+bin
+.vagrant/*
+bin/*
+torquebox-lite/*
