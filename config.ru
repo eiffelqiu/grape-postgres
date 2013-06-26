@@ -1,8 +1,21 @@
 $:.unshift "./app"
 require 'rubygems'
-#require 'data_mapper' 
 require 'sinatra'
-#DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/notes.db")
+require 'sequel'
+
+$DB = Sequel.connect('jdbc:postgresql://localhost/notes' , :user=>'notes', :password=>'notes')
+unless $DB.table_exists?(:posts)  
+  $DB.create_table :posts do
+    primary_key :id
+    String :usr, :unique => false, :null => false
+    String :device, :unique => false, :null => false
+    String :content, :unique => false, :null => false
+    String :app, :unique => false, :null => false
+    String :ip, :unique => false, :null => false        
+    Time :created_at
+    index [:usr, :device, :content, :app, :ip]
+  end
+end
 
 require 'models'
 require 'api'

@@ -25,6 +25,7 @@ gem 'trinidad', '1.4.5'
 
 #gem 'sqlite3'
 gem 'jdbc-sqlite3', :require => false
+gem 'jdbc-postgres'
 #gem 'dm-sqlite-adapter'	
 
 group :deploy do
