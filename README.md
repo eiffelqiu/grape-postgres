@@ -9,7 +9,7 @@ grape-postgres
 
 	## in psql console
 
-	$ notes=# create user notes;
+	$ notes=# create user notes with password 'notes';;
 	$ notes=# grant all privileges on database notes to notes;
 	$ notes=# \q
 
