@@ -1,0 +1,3 @@
+ruby:
+  compile_mode: jit
+  version: 1.9
