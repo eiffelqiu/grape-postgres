@@ -17,15 +17,19 @@ grape-postgres(Jruby)
 	$ notes=# grant all privileges on database notes to notes;
 	$ notes=# \q
 
-3: Rubygems
+3: Create table
+
+	$ rake db:migrate:up
+
+4: Rubygems
 
 	$ bundle install
 
-4: Start server
+5: Start server
 
 	$ torquebox-lite
 	
-5: API
+6: API
 
 	$ open http://localhost:8080
 
