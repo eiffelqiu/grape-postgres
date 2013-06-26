@@ -1,5 +1,5 @@
 $:.unshift "./app"
-require 'rubygems'
+
 require 'sinatra'
 require 'setup'
 
