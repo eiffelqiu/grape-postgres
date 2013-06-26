@@ -1,3 +1,6 @@
 ruby:
   compile_mode: jit
   version: 1.9
+  # debug: true
+  interactive: true
+  profile_api: true  
