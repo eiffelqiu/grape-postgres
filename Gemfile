@@ -1,4 +1,3 @@
-source 'http://rubygems.org'
 source 'http://torquebox.org/rubygems'
 
 gem 'ruby-debug'
@@ -7,4 +6,4 @@ gem 'grape'
 gem 'sinatra'
 gem 'jdbc-postgres'
 gem 'sequel'
-gem 'torquebox-server', '2.3.2'
+gem 'torquebox-lite'
